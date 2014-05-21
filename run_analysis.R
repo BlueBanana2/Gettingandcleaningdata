@@ -46,3 +46,4 @@ data<-cbind(subject,activity,x)
 means<- aggregate(data,list(data$subject,data$activity), mean)
 output<- means
 output[3:4]<-list(NULL)
+write.table(output, "output.txt", sep="\t") 
